@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnShowDialog1, btnShowDialog2, btnShowDialog3;
+    Button btnShowDialog1, btnShowDialog2, btnShowDialog3, btnNextActivity;
 
     Dialog dialog1, dialog2, dialog3;
 
@@ -24,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         btnShowDialog1 = findViewById(R.id.btnShowDialog1);
         btnShowDialog2 = findViewById(R.id.btnShowDialog2);
         btnShowDialog3 = findViewById(R.id.btnShowDialog3);
+        btnNextActivity = findViewById(R.id.btnNextActivity);
+
+        btnNextActivity.setOnClickListener(v -> {
+            startActivity(new Intent(this, HomeActivity.class));
+        });
 
         btnShowDialog1.setOnClickListener(v -> {
             dialog1 = new Dialog(this);
