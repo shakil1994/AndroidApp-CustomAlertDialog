@@ -2,11 +2,10 @@ package com.example.shakil.customalertdialog.CustomDialogFragment;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.example.shakil.customalertdialog.R;
 
@@ -22,7 +21,12 @@ public class CongratulationCustomAlertDialogFragment extends SupportBlurDialogFr
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_congratulation_custom_alert_dialog, container, false);
+        View view = inflater.inflate(R.layout.fragment_congratulation_custom_alert_dialog, container, false);
+        if (getDialog() != null && getDialog().getWindow() != null) {
+            getDialog().getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_background));
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
+        return view;
     }
 
     @Override

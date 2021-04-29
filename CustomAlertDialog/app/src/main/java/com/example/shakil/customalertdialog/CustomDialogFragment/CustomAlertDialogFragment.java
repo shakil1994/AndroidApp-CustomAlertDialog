@@ -1,21 +1,17 @@
 package com.example.shakil.customalertdialog.CustomDialogFragment;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.example.shakil.customalertdialog.R;
 
 import fr.tvbarthel.lib.blurdialogfragment.SupportBlurDialogFragment;
 
 public class CustomAlertDialogFragment extends SupportBlurDialogFragment {
-
-    private Drawable backgroundDrawable;
 
     public CustomAlertDialogFragment() {
         // Required empty public constructor
@@ -25,7 +21,14 @@ public class CustomAlertDialogFragment extends SupportBlurDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_custom_alert_dialog, container, false);
+        View view = inflater.inflate(R.layout.fragment_custom_alert_dialog, container, false);
+
+        if (getDialog() != null && getDialog().getWindow() != null) {
+            getDialog().getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_background));
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
+
+        return view;
     }
 
     @Override

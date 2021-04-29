@@ -3,13 +3,11 @@ package com.example.shakil.customalertdialog.CustomDialogFragment;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.example.shakil.customalertdialog.R;
@@ -29,6 +27,11 @@ public class ServiceCustomAlertDialogFragment extends SupportBlurDialogFragment 
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_service_custom_alert_dialog, container, false);
+
+        if (getDialog() != null && getDialog().getWindow() != null) {
+            getDialog().getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_background));
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
 
         btnSure = view.findViewById(R.id.btnSure);
         btnCancel = view.findViewById(R.id.btnCancel);

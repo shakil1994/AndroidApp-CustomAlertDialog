@@ -8,9 +8,9 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:src="@drawable/ic_splash_icon"
-        android:layout_gravity="center"
         android:layout_width="160dp"
-        android:layout_height="160dp"/>
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_splash_icon" />
 
 </LinearLayout>
