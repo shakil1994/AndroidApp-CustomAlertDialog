@@ -12,7 +12,7 @@ import com.example.shakil.customalertdialog.CustomDialogFragment.ServiceCustomAl
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnShowDialog1, btnShowDialog2, btnShowDialog3, btnNextActivity;
+    Button btnShowDialog1, btnShowDialog2, btnShowDialog3, btnNextActivity, ratingActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         btnShowDialog2 = findViewById(R.id.btnShowDialog2);
         btnShowDialog3 = findViewById(R.id.btnShowDialog3);
         btnNextActivity = findViewById(R.id.btnNextActivity);
+        ratingActivity = findViewById(R.id.ratingActivity);
+
+        ratingActivity.setOnClickListener(v -> {
+            startActivity(new Intent(this, RatingActivity.class));
+        });
 
         btnNextActivity.setOnClickListener(v -> {
             startActivity(new Intent(this, HomeActivity.class));

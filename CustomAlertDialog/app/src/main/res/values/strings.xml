@@ -3,4 +3,7 @@
     <string name="congratulation_message"><![CDATA[Your password has been reset. Login & continue.]]></string>
     <string name="login_message">Your registration is under review now. Please wait to get approved by the Admin</string>
     <string name="service_message">All changes you\'ve made will be lost. Are you sure to go back?</string>
+    <string name="rating"><![CDATA[Rating & Review]]></string>
+    <string name="message">What do you feel about this salon ?</string>
+    <string name="about">Please adhere to manners and ethics during the review.</string>
 </resources>
