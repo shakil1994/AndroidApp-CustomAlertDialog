@@ -68,12 +68,13 @@
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mapActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
         android:padding="10dp"
-        android:text="Next Activity"
+        android:text="Map Activity"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="16sp" />
