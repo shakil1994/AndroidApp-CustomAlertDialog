@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title=""
+        android:icon="@drawable/ic_time_circle"/>
+
+    <item android:id="@+id/ticket"
+        android:title=""
+        android:icon="@drawable/ic_ticket"/>
+
+    <item android:id="@+id/congratulation"
+        android:title=""
+        android:icon="@drawable/ic_congratulation_icon"/>
+
+    <item android:id="@+id/more"
+        android:title=""
+        android:icon="@drawable/ic_more_circle"/>
+
+</menu>

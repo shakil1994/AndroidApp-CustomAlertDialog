@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/darker_gray"
     tools:context=".RatingActivity">
 
     <include layout="@layout/custom_toolbar"/>
@@ -85,5 +86,21 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_navigation_background"
+            android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="unlabeled"
+            app:elevation="10dp"
+            app:itemIconTint="@color/navigation_item_selected_color"
+            app:menu="@menu/my_navigation_items"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
