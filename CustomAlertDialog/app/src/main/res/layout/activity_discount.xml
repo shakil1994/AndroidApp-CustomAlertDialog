@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DiscountActivity">
+
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbarLayout"/>
+
+   <RelativeLayout
+       android:layout_below="@id/toolbarLayout"
+       android:layout_above="@id/btnAddCoupon"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerDiscount"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="10dp"
+           android:padding="10dp" />
+
+   </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dialog_background"
+        android:text="+ Add Coupon"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

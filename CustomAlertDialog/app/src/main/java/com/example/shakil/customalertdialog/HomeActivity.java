@@ -9,7 +9,7 @@ import android.view.View;
 
 public class HomeActivity extends AppCompatActivity {
 
-    CardView cardViewServices;
+    CardView cardViewServices, cardViewDiscount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,11 @@ public class HomeActivity extends AppCompatActivity {
         cardViewServices = findViewById(R.id.cardViewServices);
         cardViewServices.setOnClickListener(v -> {
             startActivity(new Intent(this, ServicesActivity.class));
+        });
+
+        cardViewDiscount = findViewById(R.id.cardViewDiscount);
+        cardViewDiscount.setOnClickListener(v -> {
+            startActivity(new Intent(this, DiscountActivity.class));
         });
     }
 }

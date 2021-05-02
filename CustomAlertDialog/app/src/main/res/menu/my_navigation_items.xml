@@ -3,18 +3,18 @@
 
     <item android:id="@+id/home"
         android:title=""
-        android:icon="@drawable/ic_time_circle"/>
+        android:icon="@drawable/ic_home"/>
 
     <item android:id="@+id/ticket"
         android:title=""
-        android:icon="@drawable/ic_ticket"/>
+        android:icon="@drawable/ic_document"/>
 
-    <item android:id="@+id/congratulation"
+    <item android:id="@+id/notification"
         android:title=""
-        android:icon="@drawable/ic_congratulation_icon"/>
+        android:icon="@drawable/ic_notification"/>
 
-    <item android:id="@+id/more"
+    <item android:id="@+id/profile"
         android:title=""
-        android:icon="@drawable/ic_more_circle"/>
+        android:icon="@drawable/ic_profile"/>
 
 </menu>

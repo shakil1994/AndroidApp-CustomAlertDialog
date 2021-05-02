@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CustomAlertDialog">
-        <activity android:name=".AddServiceActivity"></activity>
+        <activity android:name=".DiscountActivity"></activity>
+        <activity android:name=".AddServiceActivity" />
         <activity android:name=".ServicesActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".RatingActivity" />
