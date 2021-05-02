@@ -11,17 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shakil.customalertdialog.Model.ServiceModel;
 import com.example.shakil.customalertdialog.R;
 
 import java.util.List;
 
 public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHolder> {
 
-    List<String> serviceList;
+    List<ServiceModel> serviceModelList;
     Context context;
 
-    public ServiceAdapter(List<String> serviceList, Context context) {
-        this.serviceList = serviceList;
+    public ServiceAdapter(List<ServiceModel> serviceModelList, Context context) {
+        this.serviceModelList = serviceModelList;
         this.context = context;
     }
 
@@ -33,15 +34,16 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        String serviceData = serviceList.get(position);
-        holder.txtHeadline.setText(serviceData);
-        holder.txtSubText.setText(serviceData);
+        holder.txtHeadline.setText(serviceModelList.get(position).getServiceName());
+        holder.txtSubText.setText(serviceModelList.get(position).getServiceName());
+        holder.imgServiceImage.setImageResource(serviceModelList.get(position).getServiceImage());
+
 
     }
 
     @Override
     public int getItemCount() {
-        return serviceList.size();
+        return serviceModelList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

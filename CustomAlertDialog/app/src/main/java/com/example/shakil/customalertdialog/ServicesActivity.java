@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.example.shakil.customalertdialog.Adapter.ServiceAdapter;
+import com.example.shakil.customalertdialog.Model.ServiceModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ServicesActivity extends AppCompatActivity {
 
@@ -29,17 +32,24 @@ public class ServicesActivity extends AppCompatActivity {
         });
 
         recyclerServices = findViewById(R.id.recyclerServices);
-
-        ArrayList<String> serviceName = new ArrayList<>();
-        serviceName.add("Hair Treatment");
-        serviceName.add("Spa");
-        serviceName.add("Facial");
-        serviceName.add("Hair Treatment");
-        serviceName.add("Spa");
-        serviceName.add("Facial");
+        ServiceModel[] serviceModels = new ServiceModel[]{
+                new ServiceModel("Hair Treatment", "Lorem ipsum dolor sit amet.", R.drawable.hair_treatment),
+                new ServiceModel("Spa", "Lorem ipsum dolor sit amet.", R.drawable.spa),
+                new ServiceModel("Facial", "Lorem ipsum dolor sit amet.", R.drawable.facial),
+                new ServiceModel("Hair Treatment", "Lorem ipsum dolor sit amet.", R.drawable.hair_treatment),
+                new ServiceModel("Spa", "Lorem ipsum dolor sit amet.", R.drawable.spa),
+                new ServiceModel("Facial", "Lorem ipsum dolor sit amet.", R.drawable.facial),
+                new ServiceModel("Hair Treatment", "Lorem ipsum dolor sit amet.", R.drawable.hair_treatment),
+                new ServiceModel("Spa", "Lorem ipsum dolor sit amet.", R.drawable.spa),
+                new ServiceModel("Facial", "Lorem ipsum dolor sit amet.", R.drawable.facial),
+                new ServiceModel("Hair Treatment", "Lorem ipsum dolor sit amet.", R.drawable.hair_treatment),
+                new ServiceModel("Spa", "Lorem ipsum dolor sit amet.", R.drawable.spa),
+                new ServiceModel("Facial", "Lorem ipsum dolor sit amet.", R.drawable.facial),
+        };
 
         recyclerServices.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ServiceAdapter(serviceName, this);
+        adapter = new ServiceAdapter(Arrays.asList(serviceModels), this);
+        recyclerServices.setHasFixedSize(true);
         recyclerServices.setAdapter(adapter);
     }
 }
