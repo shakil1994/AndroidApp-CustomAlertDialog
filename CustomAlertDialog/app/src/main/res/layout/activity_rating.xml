@@ -87,20 +87,4 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bottom_navigation_background"
-            android:layout_alignParentBottom="true"
-            app:labelVisibilityMode="unlabeled"
-            app:elevation="10dp"
-            app:itemIconTint="@color/navigation_item_selected_color"
-            app:menu="@menu/my_navigation_items"/>
-
-    </RelativeLayout>
-
 </LinearLayout>

@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="rating">#9B27AF</color>
 
+    <color name="text_color">#9B27AF</color>
+    <color name="view_color">#E1BEE6</color>
+
     <color name="mapboxWhite">#FFFFFF</color>
     <color name="mapboxBlue">#4264FB</color>
     <color name="mapboxGrayLight">#C6D2E1</color>
