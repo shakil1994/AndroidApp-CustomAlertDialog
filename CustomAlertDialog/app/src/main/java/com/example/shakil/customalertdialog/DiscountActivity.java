@@ -5,7 +5,9 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,6 +42,9 @@ public class DiscountActivity extends AppCompatActivity {
         toolbarText.setText("Discount Coupon");
 
         btnAddCoupon = findViewById(R.id.btnAddCoupon);
+        btnAddCoupon.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddDiscountCouponActivity.class));
+        });
 
         recyclerDiscount = findViewById(R.id.recyclerDiscount);
         DiscountModel[] discountModels = new DiscountModel[]{
