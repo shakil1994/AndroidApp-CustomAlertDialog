@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shakil.customalertdialog.Interface.IRecyclerClickListener;
 import com.example.shakil.customalertdialog.Model.ServiceModel;
 import com.example.shakil.customalertdialog.R;
 
@@ -35,9 +37,12 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.txtHeadline.setText(serviceModelList.get(position).getServiceName());
-        holder.txtSubText.setText(serviceModelList.get(position).getServiceName());
+        holder.txtSubText.setText(serviceModelList.get(position).getSortDescription());
         holder.imgServiceImage.setImageResource(serviceModelList.get(position).getServiceImage());
 
+        holder.setListener((view, pos) -> {
+            Toast.makeText(context, "" + serviceModelList.get(pos).getServiceName(), Toast.LENGTH_SHORT).show();
+        });
 
     }
 
@@ -46,10 +51,17 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHo
         return serviceModelList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView txtHeadline, txtSubText;
         ImageView imgServiceImage;
+
+        IRecyclerClickListener listener;
+
+        public void setListener(IRecyclerClickListener listener) {
+            this.listener = listener;
+        }
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,6 +69,13 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.MyViewHo
             txtHeadline = itemView.findViewById(R.id.txtHeadline);
             txtSubText = itemView.findViewById(R.id.txtSubText);
             imgServiceImage = itemView.findViewById(R.id.imgServiceImage);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            listener.onItemClickListener(v, getAdapterPosition());
         }
     }
 }

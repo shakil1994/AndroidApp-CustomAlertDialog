@@ -1,10 +1,13 @@
 package com.example.shakil.customalertdialog;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.shakil.customalertdialog.Adapter.ServiceAdapter;
@@ -20,6 +23,8 @@ public class ServicesActivity extends AppCompatActivity {
     RecyclerView recyclerServices;
 
     ServiceAdapter adapter;
+
+    AppCompatButton btnAddServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +56,10 @@ public class ServicesActivity extends AppCompatActivity {
         adapter = new ServiceAdapter(Arrays.asList(serviceModels), this);
         recyclerServices.setHasFixedSize(true);
         recyclerServices.setAdapter(adapter);
+
+        btnAddServices = findViewById(R.id.btnAddServices);
+        btnAddServices.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddServiceActivity.class));
+        });
     }
 }
