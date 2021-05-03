@@ -7,34 +7,34 @@
     android:orientation="vertical"
     tools:context=".PaymentHistoryFilterActivity">
 
-    <include layout="@layout/custom_toolbar"/>
+    <include layout="@layout/custom_toolbar" />
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Filter by Date"
             android:textColor="@color/black"
-            android:textSize="22sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textSize="22sp" />
 
         <LinearLayout
-            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:weightSum="2">
 
             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -48,25 +48,26 @@
                     android:id="@+id/edtStartDate"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_background"
-                    android:layout_gravity="center"
-                    android:text="05/01/2021"
                     android:drawableEnd="@drawable/ic_calendar"
-                    android:maxLines="1"
-                    android:textCursorDrawable="@drawable/color_cursor"
-                    android:padding="10dp"
                     android:drawablePadding="6dp"
-                    android:textColor="@color/black" />
+                    android:hint="05/01/2021"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -80,16 +81,17 @@
                     android:id="@+id/edtEndDate"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_background"
-                    android:layout_gravity="center"
-                    android:text="05/03/2021"
                     android:drawableEnd="@drawable/ic_calendar"
                     android:drawablePadding="6dp"
+                    android:hint="05/03/2021"
                     android:maxLines="1"
-                    android:textCursorDrawable="@drawable/color_cursor"
                     android:padding="10dp"
-                    android:textColor="@color/black" />
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
 
             </LinearLayout>
 
@@ -99,10 +101,10 @@
             android:id="@+id/btnApply"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/cancel_button_background"
             android:text="Apply"
-            android:layout_alignParentBottom="true"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp" />
