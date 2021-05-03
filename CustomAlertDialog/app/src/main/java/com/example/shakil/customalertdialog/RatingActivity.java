@@ -10,12 +10,15 @@ import android.widget.TextView;
 public class RatingActivity extends AppCompatActivity {
 
     TextView toolbarText;
-    ImageView imgBack;
+    ImageView imgBack, imgFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
+
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
 
         toolbarText = findViewById(R.id.toolbarText);
         toolbarText.setVisibility(View.GONE);

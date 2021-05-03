@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ServicesActivity extends AppCompatActivity {
 
-    ImageView imgBack;
+    ImageView imgBack, imgFilter;
     RecyclerView recyclerServices;
 
     ServiceAdapter adapter;
@@ -30,6 +30,9 @@ public class ServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
+
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
 
         imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(v -> {

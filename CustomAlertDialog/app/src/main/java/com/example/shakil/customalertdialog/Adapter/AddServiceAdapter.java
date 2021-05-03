@@ -28,7 +28,7 @@ public class AddServiceAdapter extends RecyclerView.Adapter<AddServiceAdapter.My
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new AddServiceAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_add_service, parent, false));
+        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_add_service, parent, false));
     }
 
     @Override

@@ -27,7 +27,7 @@ public class DiscountAdapter extends RecyclerView.Adapter<DiscountAdapter.MyView
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new DiscountAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_discount_coupon, parent, false));
+        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_discount_coupon, parent, false));
     }
 
     @Override

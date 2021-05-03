@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 public class DiscountActivity extends AppCompatActivity {
 
-    ImageView imgBack;
+    ImageView imgBack, imgFilter;
     TextView toolbarText;
 
     RecyclerView recyclerDiscount;
@@ -32,6 +32,9 @@ public class DiscountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discount);
+
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
 
         imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(v -> {

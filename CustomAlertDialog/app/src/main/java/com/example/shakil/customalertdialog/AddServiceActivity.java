@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import java.util.Arrays;
 
 public class AddServiceActivity extends AppCompatActivity {
 
-    ImageView imgBack;
+    ImageView imgBack, imgFilter;
     TextView toolbarText;
     RecyclerView recyclerAddServices;
 
@@ -27,6 +28,9 @@ public class AddServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_service);
+
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
 
         imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(v -> {
