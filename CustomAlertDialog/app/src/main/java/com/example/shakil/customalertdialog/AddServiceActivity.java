@@ -28,6 +28,7 @@ public class AddServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_service);
+        getSupportActionBar().hide();
 
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);

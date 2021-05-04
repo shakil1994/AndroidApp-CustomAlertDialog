@@ -2,33 +2,34 @@ package com.example.shakil.customalertdialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeActivity extends AppCompatActivity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-    CardView cardViewServices, cardViewDiscount, cardViewPayment;
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        cardViewServices = findViewById(R.id.cardViewServices);
-        cardViewServices.setOnClickListener(v -> {
-            startActivity(new Intent(this, ServicesActivity.class));
-        });
+        BottomNavigationView navView = findViewById(R.id.bottomNav_view);
 
-        cardViewDiscount = findViewById(R.id.cardViewDiscount);
-        cardViewDiscount.setOnClickListener(v -> {
-            startActivity(new Intent(this, DiscountActivity.class));
-        });
+        //Pass the ID's of Different destinations
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_orders, R.id.navigation_notifications, R.id.navigation_profile )
+                .build();
 
-        cardViewPayment = findViewById(R.id.cardViewPayment);
-        cardViewPayment.setOnClickListener(v -> {
-            startActivity(new Intent(this, PaymentHistoryActivity.class));
-        });
+        //Initialize NavController.
+        NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navView, navController);
     }
 }

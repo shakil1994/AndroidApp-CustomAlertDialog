@@ -29,6 +29,7 @@ public class PaymentHistoryDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_history_details);
+        getSupportActionBar().hide();
 
         txtPaymentId = findViewById(R.id.txtPaymentId);
         txtPaymentDate = findViewById(R.id.txtPaymentDate);

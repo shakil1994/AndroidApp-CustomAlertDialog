@@ -30,6 +30,7 @@ public class ServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
+        getSupportActionBar().hide();
 
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);

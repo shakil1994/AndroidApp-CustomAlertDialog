@@ -22,6 +22,7 @@ public class AddDiscountCouponActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_discount_coupon);
+        getSupportActionBar().hide();
 
         edtStartDate = findViewById(R.id.edtStartDate);
         edtEndDate = findViewById(R.id.edtEndDate);

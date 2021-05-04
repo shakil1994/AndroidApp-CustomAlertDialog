@@ -24,6 +24,7 @@ public class PaymentHistoryFilterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_history_filter);
+        getSupportActionBar().hide();
 
         edtStartDate = findViewById(R.id.edtStartDate);
         edtEndDate = findViewById(R.id.edtEndDate);

@@ -16,6 +16,7 @@ public class RatingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
+        getSupportActionBar().hide();
 
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);
