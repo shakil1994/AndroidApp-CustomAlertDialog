@@ -8,16 +8,6 @@
     android:background="@color/rating"
     tools:context=".MapActivity">
 
-        <!--<com.mapbox.mapboxsdk.maps.MapView
-            android:id="@+id/mapView"
-            android:background="@drawable/button_background"
-            android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:layout_margin="20dp"
-            mapbox:mapbox_cameraTargetLat="23.7501"
-            mapbox:mapbox_cameraTargetLng="90.4130"
-            mapbox:mapbox_cameraZoom="12" />-->
-
     <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"

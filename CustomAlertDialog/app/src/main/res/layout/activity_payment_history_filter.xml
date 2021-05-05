@@ -47,7 +47,7 @@
                 <EditText
                     android:id="@+id/edtStartDate"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_background"
@@ -80,7 +80,7 @@
                 <EditText
                     android:id="@+id/edtEndDate"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_background"
