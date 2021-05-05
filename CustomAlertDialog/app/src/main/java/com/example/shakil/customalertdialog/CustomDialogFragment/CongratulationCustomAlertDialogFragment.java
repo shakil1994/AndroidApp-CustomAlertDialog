@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
 
 import com.example.shakil.customalertdialog.R;
 
 import fr.tvbarthel.lib.blurdialogfragment.SupportBlurDialogFragment;
 
 public class CongratulationCustomAlertDialogFragment extends SupportBlurDialogFragment {
+
+    ImageView imgRightArrow;
 
     public CongratulationCustomAlertDialogFragment() {
         // Required empty public constructor
@@ -26,6 +29,12 @@ public class CongratulationCustomAlertDialogFragment extends SupportBlurDialogFr
             getDialog().getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_background));
             getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         }
+
+        imgRightArrow = view.findViewById(R.id.imgRightArrow);
+        imgRightArrow.setOnClickListener(v -> {
+            dismiss();
+        });
+
         return view;
     }
 
