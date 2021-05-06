@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edittext_background"
+            android:background="@drawable/dialog_background"
             android:gravity="start"
             android:hint="Say Something..."
             android:maxLines="100"

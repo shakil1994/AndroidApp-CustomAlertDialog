@@ -1,6 +1,7 @@
 package com.example.shakil.customalertdialog.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shakil.customalertdialog.Interface.IRecyclerClickListener;
 import com.example.shakil.customalertdialog.Model.OrderModel;
+import com.example.shakil.customalertdialog.OrderDetailsActivity;
+import com.example.shakil.customalertdialog.PaymentHistoryDetailsActivity;
 import com.example.shakil.customalertdialog.R;
 
 import java.util.List;
@@ -38,6 +42,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
         holder.txtDate.setText(orderModelList.get(position).getPaymentDate());
         holder.txtOrderId.setText(orderModelList.get(position).getOrderId());
         holder.txtOrderStatus.setText(orderModelList.get(position).getOrderStatus());
+
+        holder.setListener((view, pos) -> {
+            Intent intent = new Intent(context, OrderDetailsActivity.class);
+            /*intent.putExtra("PAYMENT_ID", paymentHistoryModelList.get(position).getPaymentId());
+            intent.putExtra("PAYMENT_DATE", paymentHistoryModelList.get(position).getPaymentDate());*/
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -45,8 +56,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
         return orderModelList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView txtCustomerName, txtPaymentAmount, txtTime, txtDate, txtOrderId, txtOrderStatus;
+
+        IRecyclerClickListener listener;
+
+        public void setListener(IRecyclerClickListener listener) {
+            this.listener = listener;
+        }
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,6 +74,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
             txtDate = itemView.findViewById(R.id.txtDate);
             txtOrderId = itemView.findViewById(R.id.txtOrderId);
             txtOrderStatus = itemView.findViewById(R.id.txtOrderStatus);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            listener.onItemClickListener(v, getAdapterPosition());
         }
     }
 }
