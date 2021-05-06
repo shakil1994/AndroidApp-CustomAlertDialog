@@ -29,16 +29,7 @@ public class PaymentHistoryFilterActivity extends AppCompatActivity {
         edtStartDate = findViewById(R.id.edtStartDate);
         edtEndDate = findViewById(R.id.edtEndDate);
 
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Filter");
+        toolbarSettings();
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -62,5 +53,18 @@ public class PaymentHistoryFilterActivity extends AppCompatActivity {
             }, year, month, day);
             datePickerDialog.show();
         });
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Filter");
     }
 }

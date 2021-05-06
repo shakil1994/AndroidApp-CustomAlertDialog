@@ -9,24 +9,24 @@
         android:id="@+id/navigation_home"
         android:name="com.example.shakil.customalertdialog.Fragments.Home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_orders"
         android:name="com.example.shakil.customalertdialog.Fragments.Orders.OrdersFragment"
         android:label="Orders"
-        tools:layout="@layout/orders_fragment" />
+        tools:layout="@layout/fragment_orders" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.shakil.customalertdialog.Fragments.Notifications.NotificationsFragment"
         android:label="Notifications"
-        tools:layout="@layout/notifications_fragment" />
+        tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.shakil.customalertdialog.Fragments.Profile.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/profile_fragment" />
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

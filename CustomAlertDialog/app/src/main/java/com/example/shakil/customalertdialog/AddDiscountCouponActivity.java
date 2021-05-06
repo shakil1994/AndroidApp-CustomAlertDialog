@@ -24,19 +24,10 @@ public class AddDiscountCouponActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_discount_coupon);
         getSupportActionBar().hide();
 
+        toolbarSettings();
+
         edtStartDate = findViewById(R.id.edtStartDate);
         edtEndDate = findViewById(R.id.edtEndDate);
-
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Discount Coupon");
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -60,5 +51,18 @@ public class AddDiscountCouponActivity extends AppCompatActivity {
             }, year, month, day);
             datePickerDialog.show();
         });
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Discount Coupon");
     }
 }

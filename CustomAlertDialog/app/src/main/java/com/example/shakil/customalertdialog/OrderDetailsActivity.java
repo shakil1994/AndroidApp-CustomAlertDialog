@@ -24,6 +24,8 @@ public class OrderDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order_details);
         getSupportActionBar().hide();
 
+        toolbarSettings();
+
         txtName = findViewById(R.id.txtName);
         txtOrderNo = findViewById(R.id.txtOrderNo);
         txtBookingDate = findViewById(R.id.txtBookingDate);
@@ -47,11 +49,9 @@ public class OrderDetailsActivity extends AppCompatActivity {
             btnShowedUp.setVisibility(View.GONE);
             layoutSecretCode.setVisibility(View.VISIBLE);
         });
-
-        toolbar();
     }
 
-    private void toolbar() {
+    private void toolbarSettings() {
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);
 

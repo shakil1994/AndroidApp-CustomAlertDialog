@@ -7,15 +7,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RatingActivity extends AppCompatActivity {
+public class AuthorizedPersonProfileActivity extends AppCompatActivity {
 
-    TextView toolbarText;
     ImageView imgBack, imgFilter;
+    TextView toolbarText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rating);
+        setContentView(R.layout.activity_authorized_person_profile);
         getSupportActionBar().hide();
 
         toolbarSettings();
@@ -25,12 +25,12 @@ public class RatingActivity extends AppCompatActivity {
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);
 
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setVisibility(View.GONE);
-
         imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(v -> {
             finish();
         });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Authorized Person’s Profile");
     }
 }

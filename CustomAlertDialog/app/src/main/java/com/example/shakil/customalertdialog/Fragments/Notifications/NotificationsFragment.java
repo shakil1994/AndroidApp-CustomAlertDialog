@@ -27,7 +27,7 @@ public class NotificationsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-        return inflater.inflate(R.layout.notifications_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_notifications, container, false);
     }
 
     @Override

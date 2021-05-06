@@ -9,7 +9,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.shakil.customalertdialog.Adapter.OrderAdapter;
-import com.example.shakil.customalertdialog.Model.OrderModel;
 import com.example.shakil.customalertdialog.OrdersFilterActivity;
 import com.example.shakil.customalertdialog.R;
 
@@ -44,7 +42,7 @@ public class OrdersFragment extends Fragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         mViewModel = new ViewModelProvider(this).get(OrdersViewModel.class);
 
-        View root = inflater.inflate(R.layout.orders_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_orders, container, false);
 
         imgBack = root.findViewById(R.id.imgBack);
         imgBack.setVisibility(View.GONE);

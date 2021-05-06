@@ -34,16 +34,7 @@ public class DiscountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discount);
         getSupportActionBar().hide();
 
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Discount Coupon");
+        toolbarSettings();
 
         btnAddCoupon = findViewById(R.id.btnAddCoupon);
         btnAddCoupon.setOnClickListener(v -> {
@@ -70,5 +61,18 @@ public class DiscountActivity extends AppCompatActivity {
         adapter = new DiscountAdapter(Arrays.asList(discountModels), this);
         recyclerDiscount.setHasFixedSize(true);
         recyclerDiscount.setAdapter(adapter);
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Discount Coupon");
     }
 }

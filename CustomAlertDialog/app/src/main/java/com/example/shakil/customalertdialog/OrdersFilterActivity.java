@@ -19,6 +19,10 @@ public class OrdersFilterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_orders_filter);
         getSupportActionBar().hide();
 
+        toolbarSettings();
+    }
+
+    private void toolbarSettings() {
         imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(v -> {
             finish();
@@ -29,6 +33,5 @@ public class OrdersFilterActivity extends AppCompatActivity {
 
         imgFilter = findViewById(R.id.imgFilter);
         imgFilter.setVisibility(View.GONE);
-
     }
 }

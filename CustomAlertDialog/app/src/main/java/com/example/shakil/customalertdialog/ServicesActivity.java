@@ -32,13 +32,7 @@ public class ServicesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_services);
         getSupportActionBar().hide();
 
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
+        toolbarSettings();
 
         recyclerServices = findViewById(R.id.recyclerServices);
         ServiceModel[] serviceModels = new ServiceModel[]{
@@ -64,6 +58,16 @@ public class ServicesActivity extends AppCompatActivity {
         btnAddServices = findViewById(R.id.btnAddServices);
         btnAddServices.setOnClickListener(v -> {
             startActivity(new Intent(this, AddServiceActivity.class));
+        });
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
         });
     }
 }

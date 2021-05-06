@@ -30,16 +30,7 @@ public class AddServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_service);
         getSupportActionBar().hide();
 
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Add Services");
+        toolbarSettings();
 
         recyclerAddServices = findViewById(R.id.recyclerAddServices);
         AddServiceModel[] addServiceModels = new AddServiceModel[]{
@@ -61,5 +52,18 @@ public class AddServiceActivity extends AppCompatActivity {
         addServiceAdapter = new AddServiceAdapter(Arrays.asList(addServiceModels), this);
         recyclerAddServices.setHasFixedSize(true);
         recyclerAddServices.setAdapter(addServiceAdapter);
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Add Services");
     }
 }

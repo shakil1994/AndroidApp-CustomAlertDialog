@@ -31,19 +31,10 @@ public class PaymentHistoryDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment_history_details);
         getSupportActionBar().hide();
 
+        toolbarSettings();
+
         txtPaymentId = findViewById(R.id.txtPaymentId);
         txtPaymentDate = findViewById(R.id.txtPaymentDate);
-
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setVisibility(View.GONE);
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Payment History Details");
 
         if (getIntent() != null) {
             if (!getIntent().getStringExtra("PAYMENT_ID").isEmpty() && !getIntent().getStringExtra("PAYMENT_DATE").isEmpty()) {
@@ -70,5 +61,18 @@ public class PaymentHistoryDetailsActivity extends AppCompatActivity {
         adapter = new PaymentHistoryDetailsAdapter(Arrays.asList(paymentHistoryDetailsModels), this);
         recyclerPaymentHistoryDetails.setHasFixedSize(true);
         recyclerPaymentHistoryDetails.setAdapter(adapter);
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setVisibility(View.GONE);
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Payment History Details");
     }
 }

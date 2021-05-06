@@ -32,18 +32,7 @@ public class PaymentHistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment_history);
         getSupportActionBar().hide();
 
-        imgFilter = findViewById(R.id.imgFilter);
-        imgFilter.setOnClickListener(v -> {
-            startActivity(new Intent(this, PaymentHistoryFilterActivity.class));
-        });
-
-        imgBack = findViewById(R.id.imgBack);
-        imgBack.setOnClickListener(v -> {
-            finish();
-        });
-
-        toolbarText = findViewById(R.id.toolbarText);
-        toolbarText.setText("Payment History");
+        toolbarSettings();
 
         recyclerPayment = findViewById(R.id.recyclerPayment);
         PaymentHistoryModel[] paymentHistoryModels = new PaymentHistoryModel[]{
@@ -65,5 +54,20 @@ public class PaymentHistoryActivity extends AppCompatActivity {
         adapter = new PaymentHistoryAdapter(Arrays.asList(paymentHistoryModels), this);
         recyclerPayment.setHasFixedSize(true);
         recyclerPayment.setAdapter(adapter);
+    }
+
+    private void toolbarSettings() {
+        imgFilter = findViewById(R.id.imgFilter);
+        imgFilter.setOnClickListener(v -> {
+            startActivity(new Intent(this, PaymentHistoryFilterActivity.class));
+        });
+
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(v -> {
+            finish();
+        });
+
+        toolbarText = findViewById(R.id.toolbarText);
+        toolbarText.setText("Payment History");
     }
 }

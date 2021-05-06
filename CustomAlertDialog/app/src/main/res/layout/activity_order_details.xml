@@ -303,7 +303,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shadow_up_button_background"
+                android:background="@drawable/background"
                 android:text="Showed Up"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

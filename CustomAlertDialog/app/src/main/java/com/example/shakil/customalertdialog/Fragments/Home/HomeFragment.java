@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-        View root = inflater.inflate(R.layout.home_fragment, container, false);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         cardViewServices = root.findViewById(R.id.cardViewServices);
         cardViewServices.setOnClickListener(v -> {
