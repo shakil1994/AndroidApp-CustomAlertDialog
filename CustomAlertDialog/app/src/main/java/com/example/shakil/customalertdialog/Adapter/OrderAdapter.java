@@ -38,15 +38,17 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.txtCustomerName.setText(orderModelList.get(position).getCustomerName());
         holder.txtPaymentAmount.setText(new StringBuilder().append("$ ").append(orderModelList.get(position).getPaymentAmount()).toString());
-        holder.txtTime.setText(orderModelList.get(position).getPaymentTime());
-        holder.txtDate.setText(orderModelList.get(position).getPaymentDate());
+        holder.txtTime.setText(orderModelList.get(position).getOrderTime());
+        holder.txtDate.setText(orderModelList.get(position).getOrderDate());
         holder.txtOrderId.setText(orderModelList.get(position).getOrderId());
         holder.txtOrderStatus.setText(orderModelList.get(position).getOrderStatus());
 
         holder.setListener((view, pos) -> {
             Intent intent = new Intent(context, OrderDetailsActivity.class);
-            /*intent.putExtra("PAYMENT_ID", paymentHistoryModelList.get(position).getPaymentId());
-            intent.putExtra("PAYMENT_DATE", paymentHistoryModelList.get(position).getPaymentDate());*/
+            intent.putExtra("ORDER_CUSTOMER_NAME", orderModelList.get(position).getCustomerName());
+            intent.putExtra("ORDER_ID", orderModelList.get(position).getOrderId());
+            intent.putExtra("ORDER_DATE", orderModelList.get(position).getOrderDate());
+            intent.putExtra("ORDER_TIME", orderModelList.get(position).getOrderTime());
             context.startActivity(intent);
         });
     }

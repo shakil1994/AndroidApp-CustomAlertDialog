@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".OrderDetailsActivity">
 
-    <include layout="@layout/custom_toolbar"
-        android:id="@+id/toolbar"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
 
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@id/btnMarkAsComplete"
         android:layout_below="@id/toolbar"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -178,15 +179,123 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/txtSecret"
+            <LinearLayout
+                android:id="@+id/layoutSecretCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Secret Code"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtSecret"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Secret Code"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_background"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:backgroundTint="#AC4DBD" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#E1BEE6" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:backgroundTint="#AC4DBD" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#E1BEE6" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:backgroundTint="#AC4DBD" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#E1BEE6" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:backgroundTint="#AC4DBD" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#E1BEE6" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_color"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:backgroundTint="#AC4DBD" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnShowedUp"
@@ -194,10 +303,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/dialog_background"
+                android:background="@drawable/shadow_up_button_background"
                 android:text="Showed Up"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -499,13 +608,13 @@
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_alignParentBottom="true"
         android:id="@+id/btnMarkAsComplete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/cancel_button_background"
         android:text="Mark as Complete"
         android:textAllCaps="false"

@@ -3,19 +3,19 @@ package com.example.shakil.customalertdialog.Model;
 public class OrderModel {
     private String customerName;
     private int paymentAmount;
-    private String paymentTime;
-    private String paymentDate;
+    private String orderTime;
+    private String orderDate;
     private String orderId;
     private String orderStatus;
 
     public OrderModel() {
     }
 
-    public OrderModel(String customerName, int paymentAmount, String paymentTime, String paymentDate, String orderId, String orderStatus) {
+    public OrderModel(String customerName, int paymentAmount, String orderTime, String orderDate, String orderId, String orderStatus) {
         this.customerName = customerName;
         this.paymentAmount = paymentAmount;
-        this.paymentTime = paymentTime;
-        this.paymentDate = paymentDate;
+        this.orderTime = orderTime;
+        this.orderDate = orderDate;
         this.orderId = orderId;
         this.orderStatus = orderStatus;
     }
@@ -36,20 +36,20 @@ public class OrderModel {
         this.paymentAmount = paymentAmount;
     }
 
-    public String getPaymentTime() {
-        return paymentTime;
+    public String getOrderTime() {
+        return orderTime;
     }
 
-    public void setPaymentTime(String paymentTime) {
-        this.paymentTime = paymentTime;
+    public void setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
     }
 
-    public String getPaymentDate() {
-        return paymentDate;
+    public String getOrderDate() {
+        return orderDate;
     }
 
-    public void setPaymentDate(String paymentDate) {
-        this.paymentDate = paymentDate;
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
 
     public String getOrderId() {
