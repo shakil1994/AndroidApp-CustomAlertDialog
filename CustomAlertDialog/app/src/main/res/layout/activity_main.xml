@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShowDialog1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background"
         android:padding="10dp"
@@ -21,7 +22,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShowDialog2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
@@ -33,7 +34,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShowDialog3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
@@ -45,7 +46,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNextActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
@@ -57,7 +58,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ratingActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
@@ -69,56 +70,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mapActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_background"
         android:padding="10dp"
         android:text="Map Activity"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:padding="10dp"
-        android:text="Next Activity"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:padding="10dp"
-        android:text="Next Activity"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:padding="10dp"
-        android:text="Next Activity"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:padding="10dp"
-        android:text="Next Activity"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="16sp" />

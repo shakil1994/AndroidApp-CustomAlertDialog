@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CustomAlertDialog">
-        <activity android:name=".PaymentHistoryDetailsActivity"></activity>
+        <activity android:name=".OrdersFilterActivity"></activity>
+        <activity android:name=".PaymentHistoryDetailsActivity" />
         <activity android:name=".PaymentHistoryFilterActivity" />
         <activity android:name=".PaymentHistoryActivity" />
         <activity android:name=".AddDiscountCouponActivity" />
