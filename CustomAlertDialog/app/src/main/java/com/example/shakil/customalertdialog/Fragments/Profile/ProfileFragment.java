@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.shakil.customalertdialog.AuthorizedPersonProfileActivity;
+import com.example.shakil.customalertdialog.EmployeeListActivity;
 import com.example.shakil.customalertdialog.OrdersFilterActivity;
 import com.example.shakil.customalertdialog.R;
 
@@ -28,7 +29,7 @@ public class ProfileFragment extends Fragment {
     ImageView imgBack, imgFilter;
     TextView toolbarText;
 
-    CardView cardViewAuthorized;
+    CardView cardViewAuthorized, cardViewManageEmployee;
 
     public static ProfileFragment newInstance() {
         return new ProfileFragment();
@@ -50,8 +51,14 @@ public class ProfileFragment extends Fragment {
         imgFilter.setVisibility(View.GONE);
 
         cardViewAuthorized = root.findViewById(R.id.cardViewAuthorized);
+        cardViewManageEmployee = root.findViewById(R.id.cardViewManageEmployee);
         cardViewAuthorized.setOnClickListener(v -> {
             startActivity(new Intent(getContext(), AuthorizedPersonProfileActivity.class));
+        });
+
+        cardViewManageEmployee = root.findViewById(R.id.cardViewManageEmployee);
+        cardViewManageEmployee.setOnClickListener(v -> {
+            startActivity(new Intent(getContext(), EmployeeListActivity.class));
         });
 
         return root;
