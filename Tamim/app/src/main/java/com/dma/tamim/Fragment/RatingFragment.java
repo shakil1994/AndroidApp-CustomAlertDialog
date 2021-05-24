@@ -39,7 +39,7 @@ public class RatingFragment extends BottomSheetDialogFragment {
         View rootView = inflater.inflate(R.layout.fragment_rating, container, false);
 
         imgClose = rootView.findViewById(R.id.imgClose);
-        
+
         return rootView;
     }
 }

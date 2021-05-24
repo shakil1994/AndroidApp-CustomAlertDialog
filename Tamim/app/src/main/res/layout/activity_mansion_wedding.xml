@@ -8,6 +8,7 @@
     tools:context=".MansionWeddingActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardImageView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_250sdp">
 
@@ -78,15 +79,25 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnBottomSheet"
+        android:layout_below="@id/cardImageView"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp" />
+
     <Button
         android:id="@+id/btnBottomSheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20ssp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:gravity="center"
         android:text="Bottom Sheet" />
 
