@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#A0333639</color>
+    <color name="textHintColor">#E0E0E0</color>
 </resources>
