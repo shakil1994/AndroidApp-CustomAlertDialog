@@ -39,14 +39,15 @@
             android:textSize="16sp"
             android:textStyle="normal" />
 
-        <RatingBar
-            android:id="@+id/rating_bar"
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:numStars="5"
-            android:theme="@style/RatingBar" />
+            app:srb_borderColor="@color/rating"
+            app:srb_fillColor="@color/rating"
+            app:srb_numberOfStars="5"
+            app:srb_rating="0"
+            app:srb_starSize="30dp"
+            app:srb_stepSize="0.5" />
 
         <TextView
             android:layout_width="match_parent"
