@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wedding" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/transparent_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top|right|center_vertical|center_horizontal|center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:src="@drawable/ic_image" />
+
+                <TextView
+                    android:id="@+id/txtTotalImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="2005"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtRestaurantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Royal Sonesta Boston"
+        android:textColor="#303443"
+        android:textSize="@dimen/_16ssp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srb_borderColor="#F0C756"
+            app:srb_fillColor="#F0C756"
+            app:srb_numberOfStars="5"
+            app:srb_rating="0"
+            app:srb_starSize="@dimen/_15sdp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/txtRestaurantAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/ratingBar"
+            android:text="58 Review - Hotel Weddings - "
+            android:textColor="#A1ACBC"
+            android:textSize="@dimen/_14ssp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtRestaurantAddress1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingBar"
+        android:text="Land Blvd, Cambridge, MA 02142"
+        android:textColor="#A1ACBC"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/txtRestaurantDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Royal Sonesta Boston is a modern hotel located in Cambridge, Massachusetts. Couples will experience picturesque..."
+        android:textColor="#303443"
+        android:textSize="@dimen/_16ssp" />
+
+    <Button
+        android:id="@+id/btnBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Request for Quotation"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp" />
+
+</LinearLayout>
