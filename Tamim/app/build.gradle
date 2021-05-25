@@ -41,4 +41,6 @@ dependencies {
     // Scalable Size Units(dimens)
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    implementation 'com.iarcuschin:simpleratingbar:0.1.5'
 }
