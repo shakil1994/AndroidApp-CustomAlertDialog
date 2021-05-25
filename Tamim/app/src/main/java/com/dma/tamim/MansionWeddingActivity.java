@@ -6,14 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.dma.tamim.Adapter.ItemAdapter;
-import com.dma.tamim.Fragment.RatingFragment;
 import com.dma.tamim.Helper.MySwipeHelper;
 import com.dma.tamim.Model.ItemModel;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +33,15 @@ public class MansionWeddingActivity extends AppCompatActivity {
 
         btnBottomSheet = findViewById(R.id.btnBottomSheet);
         btnBottomSheet.setOnClickListener(v -> {
-            RatingFragment ratingFragment = RatingFragment.getInstance();
-            ratingFragment.show(getSupportFragmentManager(), "RatingFragment");
+            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
+            View bottomSheetView = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_dialog_rating, findViewById(R.id.bottomSheetContainer));
+            bottomSheetView.findViewById(R.id.btnSubmit).setOnClickListener(v1 -> {
+                Toast.makeText(MansionWeddingActivity.this, "Submit", Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            });
+            bottomSheetView.findViewById(R.id.imgClose).setOnClickListener(v12 -> bottomSheetDialog.dismiss());
+            bottomSheetDialog.setContentView(bottomSheetView);
+            bottomSheetDialog.show();
         });
 
         recyclerItem = findViewById(R.id.recyclerItem);
