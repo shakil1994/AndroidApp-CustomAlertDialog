@@ -1,6 +1,7 @@
 package com.dma.tamim;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.dma.tamim.Adapter.ItemAdapter;
@@ -35,13 +37,20 @@ public class MansionWeddingActivity extends AppCompatActivity {
         btnBottomSheet.setOnClickListener(v -> {
             BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
             View bottomSheetView = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_dialog_rating, findViewById(R.id.bottomSheetContainer));
-            bottomSheetView.findViewById(R.id.btnSubmit).setOnClickListener(v1 -> {
+
+            AppCompatButton btnSubmit = bottomSheetView.findViewById(R.id.btnSubmit);
+            btnSubmit.setOnClickListener(v1 -> {
                 Toast.makeText(MansionWeddingActivity.this, "Submit", Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             });
-            bottomSheetView.findViewById(R.id.imgClose).setOnClickListener(v12 -> bottomSheetDialog.dismiss());
+
+            ImageView imgClose = bottomSheetView.findViewById(R.id.imgClose);
+            imgClose.setOnClickListener(v12 -> {
+                bottomSheetDialog.dismiss();
+            });
             bottomSheetDialog.setContentView(bottomSheetView);
             bottomSheetDialog.show();
+
         });
 
         recyclerItem = findViewById(R.id.recyclerItem);
