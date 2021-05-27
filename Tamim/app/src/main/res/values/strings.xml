@@ -7,4 +7,10 @@
     <string name="yourReview">Your review</string>
     <string name="review"><![CDATA[Review & Ratings]]></string>
     <string name="comment">Madeline was amazing to work with.</string>
+    <string name="successfully_message">Quotation sent successfully!</string>
+    <string name="logout_message">Do you want to Logout?</string>
+    <string name="delete_message">Do you want to Delete?</string>
+    <string name="add_task_message">Add New Task</string>
+    <string name="thnx_message">Thank you for reply! The vendor may contact you.</string>
+    <string name="thnx_1_message">Thanks for accepting the quotation, your vendor will contact soon.</string>
 </resources>

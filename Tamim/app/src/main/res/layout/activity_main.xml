@@ -47,4 +47,17 @@
         android:text="View all reviews"
         android:textAllCaps="false"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAlertActivity"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rating_button_background"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:textColor="#8D131E"
+        android:textSize="@dimen/_14ssp"
+        android:text="Alert Activity"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

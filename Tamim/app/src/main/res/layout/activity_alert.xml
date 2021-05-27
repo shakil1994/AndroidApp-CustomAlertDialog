@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlertActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSuccessfullyAlert"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rating_button_background"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:textColor="#8D131E"
+        android:textSize="@dimen/_14ssp"
+        android:text="Successfully Alert"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

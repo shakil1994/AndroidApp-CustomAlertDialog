@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ToggleButton toggleButton;
     TextView txtChangeLanguage;
     Button btnNextActivity;
-    AppCompatButton btnRatingAndReview;
+    AppCompatButton btnRatingAndReview, btnAlertActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnRatingAndReview = findViewById(R.id.btnRatingAndReview);
+        btnAlertActivity = findViewById(R.id.btnAlertActivity);
 
         btnNextActivity = findViewById(R.id.btnNextActivity);
         txtChangeLanguage = findViewById(R.id.txtChangeLanguage);
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
             bottomSheetView.findViewById(R.id.imgClose).setOnClickListener(v12 -> bottomSheetDialog.dismiss());
             bottomSheetDialog.setContentView(bottomSheetView);
             bottomSheetDialog.show();
+        });
+
+        btnAlertActivity.setOnClickListener(v -> {
+            startActivity(new Intent(this, AlertActivity.class));
         });
     }
 }
