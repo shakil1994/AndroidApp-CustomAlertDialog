@@ -72,7 +72,7 @@ public class MenuItemActivity extends AppCompatActivity implements RecyclerItemT
     }
 
     private void prepareCart() {
-        mService.getMenuList(URL_API)
+        mService.getMenuList()
                 .enqueue(new Callback<List<Item>>() {
                     @Override
                     public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
