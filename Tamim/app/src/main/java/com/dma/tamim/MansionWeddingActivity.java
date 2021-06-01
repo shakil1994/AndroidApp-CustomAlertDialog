@@ -61,8 +61,8 @@ public class MansionWeddingActivity extends AppCompatActivity {
         MySwipeHelper mySwipeHelper = new MySwipeHelper(this, recyclerItem, 200) {
             @Override
             public void instantiateMyButton(RecyclerView.ViewHolder viewHolder, List<MyButton> buffer) {
-                buffer.add(new MyButton(MansionWeddingActivity.this, "",
-                        0, R.drawable.ic_delete,
+                buffer.add(new MyButton(MansionWeddingActivity.this, "Delete",
+                        30, 0,
                         Color.parseColor("#FF4B55"), pos -> {
                     Toast.makeText(MansionWeddingActivity.this, "Delete item", Toast.LENGTH_SHORT).show();
 
