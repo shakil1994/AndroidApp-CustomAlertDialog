@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#A0333639</color>
     <color name="textHintColor">#E0E0E0</color>
+
+    <color name="colorPrimary">#111111</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#EA3732</color>
+    <color name="bg_row_background">#Fa315B</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#A9A9A9</color>
 </resources>

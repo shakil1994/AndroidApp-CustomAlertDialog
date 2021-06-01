@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ToggleButton toggleButton;
     TextView txtChangeLanguage;
     Button btnNextActivity;
-    AppCompatButton btnRatingAndReview, btnAlertActivity;
+    AppCompatButton btnRatingAndReview, btnAlertActivity, btnMenuItemActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnRatingAndReview = findViewById(R.id.btnRatingAndReview);
         btnAlertActivity = findViewById(R.id.btnAlertActivity);
+        btnMenuItemActivity = findViewById(R.id.btnMenuItemActivity);
 
         btnNextActivity = findViewById(R.id.btnNextActivity);
         txtChangeLanguage = findViewById(R.id.txtChangeLanguage);
@@ -56,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnAlertActivity.setOnClickListener(v -> {
             startActivity(new Intent(this, AlertActivity.class));
+        });
+
+        btnMenuItemActivity.setOnClickListener(v -> {
+            startActivity(new Intent(this, MenuItemActivity.class));
         });
     }
 }

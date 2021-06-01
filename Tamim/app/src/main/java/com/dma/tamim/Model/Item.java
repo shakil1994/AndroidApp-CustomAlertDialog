@@ -1,6 +1,6 @@
 package com.dma.tamim.Model;
 
-public class FoodItem {
+public class Item {
     private String thumbnail;
 
     private String price;
