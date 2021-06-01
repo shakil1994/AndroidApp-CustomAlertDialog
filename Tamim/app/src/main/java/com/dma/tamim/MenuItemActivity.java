@@ -1,6 +1,7 @@
 package com.dma.tamim;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -42,6 +43,11 @@ public class MenuItemActivity extends AppCompatActivity implements RecyclerItemT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_item);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Black Birds");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mService = Common.getMenuRequest();
 
