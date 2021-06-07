@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ToggleButton toggleButton;
     TextView txtChangeLanguage;
     Button btnNextActivity;
-    AppCompatButton btnRatingAndReview, btnAlertActivity, btnMenuItemActivity;
+    AppCompatButton btnRatingAndReview, btnAlertActivity, btnMenuItemActivity, btnBottomSheetNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnRatingAndReview = findViewById(R.id.btnRatingAndReview);
         btnAlertActivity = findViewById(R.id.btnAlertActivity);
         btnMenuItemActivity = findViewById(R.id.btnMenuItemActivity);
+        btnBottomSheetNew = findViewById(R.id.btnBottomSheetNew);
 
         btnNextActivity = findViewById(R.id.btnNextActivity);
         txtChangeLanguage = findViewById(R.id.txtChangeLanguage);
@@ -61,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
 
         btnMenuItemActivity.setOnClickListener(v -> {
             startActivity(new Intent(this, MenuItemActivity.class));
+        });
+
+        btnBottomSheetNew.setOnClickListener(v -> {
+            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this, R.style.BottomSheetDialogTheme);
+            View bottomSheetView = LayoutInflater.from(this).inflate(R.layout.layout_product_details, findViewById(R.id.bottomSheetContainer));
+
+            bottomSheetDialog.setContentView(bottomSheetView);
+            bottomSheetDialog.show();
         });
     }
 }
