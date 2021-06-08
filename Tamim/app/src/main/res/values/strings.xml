@@ -13,4 +13,13 @@
     <string name="add_task_message">Add New Task</string>
     <string name="thnx_message">Thank you for reply! The vendor may contact you.</string>
     <string name="thnx_1_message">Thanks for accepting the quotation, your vendor will contact soon.</string>
+
+    <string-array name="names">
+        <item>Cost: BDT. 2000</item>
+        <item>Cost: BDT. 4000</item>
+        <item>Cost: BDT. 6000</item>
+        <item>Cost: BDT. 8000</item>
+        <item>Cost: BDT. 10000</item>
+        <item>Cost: BDT. 12000</item>
+    </string-array>
 </resources>
